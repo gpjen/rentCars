@@ -1,7 +1,107 @@
-h1{
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: auto;
     width: 100%;
-    height: 100px;
-    background-color: #00ffff6c;
-    text-align: center;
-    color: darkslategray;
+    overflow: auto;
+}
+
+.login {
+    padding: 5px 35px;
+    font-weight: 700;
+    color: gold;
+}
+
+.hello {
+    min-height: auto;
+    /* background-image: linear-gradient(12deg, #f8d800, #fded85); */
+    padding: 55px 0;
+    text-shadow:0px 0px 40px #fff7e5;
+    color: darkslategrey;
+}
+
+.whyRencallz {
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.footer {
+    color: white;
+    font-size: 14px;
+}
+
+.footer li {
+    background-color: #198754;
+    color: white;
+}
+
+.footer i {
+    font-size: 25px;
+    padding: 5px 25px;
+    color: white;
+}
+
+
+#alamat {
+    width: 100%;
+    resize: none;
+}
+
+.scroll-container{
+    margin-right: 0;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 5px 70px 5px 20px;
+    background: transparent;
+    height: 100%;
+    border-radius:15px;
+}
+
+.gridscroll{
+    display:inline-block;
+}
+
+.gridscroll span {
+    /* background-color: coral; */
+    height: 150px;
+}
+
+.gridscroll img {
+    height: 130px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gridscroll img:hover {
+    box-shadow: 0px 0px 10px #9b9b9b;
+    opacity: 80%;
+}
+
+
+
+
+
+
+
+
+
+/* w3school */
+
+.scroll-container::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+    background: none;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #888;
 }

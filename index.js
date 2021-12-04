@@ -16,23 +16,34 @@ app.set('view engine', 'hbs');
 
 app.use('/public', express.static(path.join(__dirname, 'public')))
 
+hbs.registerPartials(__dirname + '/views/partials')
+
 //buat end point
 app.get('/', function (req, res) {
-    const nama = "gandi purna jen"
+    const title = "Home | Rentcallz";
     res.render('index', {
-        nama: nama,
-        umur: 21,
-        hobi: "makan"
+        title,
     })
 }) 
-
 
 
 //setting port dan server
 const port = 3000;
 const server = http.createServer(app);
 server.listen(port);
-console.log("server runing on port :" + port);
+console.log("server runing on port : " + port);
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

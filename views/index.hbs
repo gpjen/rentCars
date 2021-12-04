@@ -1,22 +1,248 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{nama}}</title>
+{{>head}}
 
-    <link rel="stylesheet" href="/public/stylesheet/style.css">
-</head>
-<body>
-    <h1> {{nama}}</h1>
-    <ul>
-        <li>
-            umur : {{umur}} tahun
-        </li>
-        <li>
-            hobi : {{hobi}}
-        </li>
-    </ul>
-</body>
-</html>
+
+
+
+<div class="container-fluid hello">
+    <div class="container">
+    <div class="row mx-auto">
+        <div class="col-lg-7 pt-5 pb-5">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner mt-2 rounded">
+                <div class="carousel-item active">
+                <img src="/public/img/cou/coros (1).png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/public/img/cou/coros (2).png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/public/img/cou/coros (3).png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/public/img/cou/coros (4).png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                <img src="/public/img/cou/coros (5).png" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            </div>
+        </div>
+        <div class="col-lg-5 pt-5 mx-auto">
+            <h2 class="fs-1">Ingin liburan maksimal? Sewa mobil lepas kunci aja untuk eksplor destinasimu!</h2>
+            
+            <div class="d-grid gap-2 mt-5">
+            <button class="btn btn-success pt-3 pb-3 text-light" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">SEWA SEKARANG</button>
+            </div>
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form method="POST" id="login" action="">
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Tetap masuk</label>
+                            </div>
+                            <div class="d-grid col-12 mx-auto">
+                                <button class="btn btn-warning" type="button">Masuk</button>
+                            </div>
+    
+                                <br><p>Tidak memliliki akun? klik <a href="#" data-bs-toggle="modal" data-bs-target="#registerModal"><i>Register</i></a></p>
+    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+    
+            <!-- Modal -->
+            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    <form action="#" method="POST" id="daftar">
+                        <div class="mb-3">
+                            <input required placeholder="Nama" type="text" class="form-control" id="daftarNama">
+                        </div>
+                        <div class="mb-3">
+                            <input required placeholder="Email" type="email" class="form-control" id="daftarEmail">
+                        </div>
+                        <div class="mb-3">
+                            <input required placeholder="Password" type="password" class="form-control" id="daftarPass">
+                        </div>
+                        <div class="mb-3">
+                            <input required placeholder="Konfirmasi Password" type="password" class="form-control" id="daftarPass1">
+                        </div>
+                        <div class="mb-3">
+                            <input required placeholder="Nomor KTP" type="number" class="form-control" id="daftarKtp">
+                        </div>
+                        <div class="mb-3">
+                            <input required placeholder="Nomot Telefon" type="tel" class="form-control" id="daftarNama">
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" name="alamat" id="daftarAlamat" rows="4" placeholder="Alamat"></textarea>
+                        </div>
+    
+                    </form>
+                    </div>
+                    <div class="d-grid col-11 mx-auto mb-3">
+                        <button class="btn btn-success" type="button">Daftar</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<div class="container">
+    <div class="scroll-container">
+        <div class="gridscroll">
+
+            <span><img src="/public/img/cou/coros (3).png" alt="" data-bs-toggle="modal" data-bs-target="#car1"></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+            <span><img src="/public/img/cou/coros (3).png" alt=""></span>
+
+
+            <div class="modal fade" id="car1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Car spect</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <img src="/public/img/cou/coros (3).png" alt="">
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <td style="width: 300px;">Torsi mesin</td>
+                                <td>1500 CC</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 300px;">Transmisi</td>
+                                <td>Manual 6 Speed</td>
+                            </tr>
+                            <tr>
+                                <td>tahun Keluaran</td>
+                                <td>2019</td>
+                            </tr>
+                            <tr>
+                                <td>Kelelngkapan</td>
+                                <td>Lengkap</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+</div>
+
+
+
+
+
+<div class="container-fluid mt-5 mb-5 bg-success bg-gradient text-light shadow">
+    <div class="container pt-5 pb-5" style="height: 450px;">
+
+        <div class="d-flex justify-content-evenly align-items-center flex-wrap" style="height: 100%;">
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (1).png" style="height: 60px;">
+            </div>
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (2).png" style="height: 60px;">
+            </div>
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (3).png" style="height: 60px;">
+            </div>
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (4).png" style="height: 60px;">
+            </div>
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (5).png" style="height: 60px;">
+            </div>
+            <div class="col-md-2 p-4">
+                <img src="/public/img/cou/suport/pngegg (6).png" style="height: 60px;">
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container pt-3 shadow bg-white rounded whyRencallz">
+    <h3 class="text-center mt-3 mb-5">Keuntungan di RENCALLZ</h3>
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card" style="width: 100%; height: 100%;">
+                <img src="/public/img/cou/ios andro.png" class="card-img-top" style="">
+                <div class="card-body">
+                    <h5 class="card-title">Lebih mudah</h5>
+                    <p class="card-text">Rentcallz memudahkan anda untuk segala penggunaannya. mulai dari penyewaan, pembayaran, hingga perpanjangan sewa.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card" style="width: 100%; height: 100%;">
+                <img src="/public/img/cou/pngegg (8).png" class="card-img-top" style="">
+                <div class="card-body">
+                    <h5 class="card-title">Murah dan tanpa deposit awal</h5>
+                    <p class="card-text">Rentcallz memungkinkan untuk pelanggan melakukan transaksi penyewaan dengan harga menarik</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card" style="width: 100%; height: 100%;">
+                <img src="/public/img/cou/pngegg (12).png" class="card-img-top" style="">
+                <div class="card-body">
+                    <h5 class="card-title">Savety</h5>
+                    <p class="card-text">Rentcallz selalu memastikan konsidi mobil dalam keadaan sehat dan bersih demi keamanan dan kenyamanan pelanggan</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+{{>foter}}
